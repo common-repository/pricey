@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/pricey",
+  "version": "0.1.0",
+  "title": "プライシー",
+  "category": "design",
+  "keywords": [
+    "linkbox"
+  ],
+  "icon": "smiley",
+  "description": "プライシー",
+  "attributes": {
+    "wpProductVariantGroupId": {
+      "type": "integer",
+      "default": 0
+    }
+  },
+  "textdomain": "pricey",
+  "editorScript": "file:./js/index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./block.css"
+}

@@ -1,0 +1,49 @@
+{
+	"name": "wp",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "WP_ENV_PORT=$npm_config_port wp-env start -- --update && NODE_ENV=development wp-scripts start --webpack-copy-php",
+		"uninstall": "wp-env destroy",
+		"logs": "wp-env logs --debug=true",
+		"zip": "NODE_ENV=production webpack --mode production && NODE_ENV=production wp-scripts plugin-zip"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-react": "^7.0.0",
+		"@wordpress/components": "^25.1.0",
+		"@wordpress/env": "^8.1.0",
+		"@wordpress/scripts": "^26.7.0",
+		"autoprefixer": "^10.4.14",
+		"babel-loader": "^8.0.6",
+		"bable-loader": "^0.0.1-security",
+		"postcss": "^8.4.25",
+		"tailwindcss": "^3.3.2",
+		"webpack": "^5.88.1",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^4.15.1"
+	},
+	"dependencies": {
+		"@wordpress/components": "^25.1.0",
+		"@wordpress/compose": "^6.12.0",
+		"axios": "^1.4.0",
+		"css-loader": "^6.8.1",
+		"node-sass": "^7.0.3",
+		"react-circular-progressbar": "^2.1.0",
+		"sass": "^1.63.6",
+		"sass-loader": "^13.3.2",
+		"style-loader": "^3.3.3"
+	},
+	"files": [
+		"assets",
+		"pricey.php",
+		"server",
+		"build"
+	]
+}
